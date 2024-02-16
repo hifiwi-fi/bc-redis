@@ -13,7 +13,7 @@ fi
 # Set maxmemory-policy to 'allkeys-lru' for caching servers that should always evict old keys
 : ${MAXMEMORY_POLICY:="volatile-lru"}
 : ${APPENDONLY:="no"}
-: ${FLY_VM_MEMORY_MB:=512}
+: ${FLY_VM_MEMORY_MB:=256}
 if [ "${NOSAVE}" = "" ] ; then
   : ${SAVE:="3600 1 300 100 60 10000"}
 fi

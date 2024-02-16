@@ -14,13 +14,14 @@ primary_region = "lax"
 [build]
   dockerfile = "Dockerfile"
   [build.args]
-  ENV = "production"
-  REDIS_VERSION=7.2
+    ENV = "production"
+    REDIS_VERSION = "7.2"
 
 [env]
   ENV = "production"
   APPENDONLY="yes"
   MAXMEMORY_POLICY="noeviction"
+  FLY_VM_MEMORY_MB="256"
 
 # Uncomment these lines for public internet access to Redis on port 10000
 #
